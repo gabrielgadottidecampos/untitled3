@@ -1,7 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/ngbank/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/ngbank/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
+      <sourceFolder url="file://$MODULE_DIR$/ngbank/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <sourceFolder url="file://$MODULE_DIR$/ngbank/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/psr/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/opis/closure" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/voku/portable-ascii" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/asm89/stack-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/brick/math" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/nette/schema" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/nette/utils" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/facade/flare-client-php" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/facade/ignition" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/facade/ignition-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/league/commonmark" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/league/config" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/league/mime-type-detection" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/ramsey/collection" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/dflydev/dot-access-data" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/laravel/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/laravel/sail" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/laravel/sanctum" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/laravel/serializable-closure" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/mockery/mockery" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/phpspec/prophecy" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/phpunit/php-invoker" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/error-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/event-dispatcher-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/http-client-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/polyfill-iconv" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/polyfill-php72" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/polyfill-php73" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/polyfill-php81" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/translation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/fakerphp/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/hamcrest/hamcrest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/fruitcake/laravel-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/sebastian/cli-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/sebastian/code-unit" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/sebastian/complexity" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/sebastian/lines-of-code" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/sebastian/resource-operations" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/sebastian/type" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/nunomaduro/collision" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/swiftmailer/swiftmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/tijsverkoyen/css-to-inline-styles" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/dragonmantank/cron-expression" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/phpdocumentor/reflection-common" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/phpdocumentor/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/composer" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
