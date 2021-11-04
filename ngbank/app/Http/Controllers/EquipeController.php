@@ -14,7 +14,8 @@ class EquipeController extends Controller
      */
     public function index()
     {
-        //
+        $equipe = Equipe::all();
+        return $equipe;
     }
 
     /**
@@ -35,7 +36,8 @@ class EquipeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $equipe = Equipe::create($request->all());
+        return $equipe;
     }
 
     /**
@@ -46,7 +48,7 @@ class EquipeController extends Controller
      */
     public function show(Equipe $equipe)
     {
-        //
+        return $equipe;
     }
 
     /**
@@ -69,7 +71,8 @@ class EquipeController extends Controller
      */
     public function update(Request $request, Equipe $equipe)
     {
-        //
+        $equipe->update($request->all());
+        return $equipe;
     }
 
     /**
