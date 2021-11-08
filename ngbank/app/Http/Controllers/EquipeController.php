@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Equipe;
+use App\Repositories\EquipeRepository;
 use Illuminate\Http\Request;
 use Ramsey\Uuid\Type\Integer;
 use Illuminate\Support\Facades\Storage;
@@ -19,11 +20,34 @@ class EquipeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //$equipe = Equipe::all();
-        $equipe = $this->equipe->all();
-        return response()->json($equipe,200);
+
+        $equipeRepository = new EquipeRepository($this->equipe);
+
+
+        if($request->has('atributos_funcionarios')){
+            $atributos_funcionarios = $request->atributos_funcionarios;
+            $equipeRepository->selectAtributosRegistrosRelacionados('funcionarios:id,'.$atributos_funcionarios);
+
+        }else{
+            $equipeRepository->selectAtributosRegistrosRelacionados('funcionarios');
+        }
+
+
+        if($request->has('filtro')){
+
+            $equipeRepository->filtro($request->filtro);
+        }
+
+        if($request->has('atributos')){
+            $atributos = $request->atributos;
+            $equipeRepository->selectAtributos($request->atributos);
+        }
+//------------------------------------------------------------------
+
+        return response()->json($equipeRepository->getResultado(),200);
+
     }
 
 // metodo para adicionar um registro no banco **************************************************************************
@@ -61,7 +85,7 @@ class EquipeController extends Controller
      */
     public function show($id)
     {
-        $equipe = $this->equipe->find($id);
+        $equipe = $this->equipe->with('funcionarios')->find($id);
         // validação da pesquisa ************************
         if($equipe === null){
             return response()->json(['erro' => 'A Equipe pesquisado não existe'],404);
@@ -106,10 +130,14 @@ class EquipeController extends Controller
         $imagem = $request->file('imagem');
         $imagem_urn = $imagem->store('imagens/equipes', 'public');
 
-        $equipe->update([
-            'nome' => $request->nome,
-            'imagem' => $imagem_urn
-        ]);
+        //preecher o objeto $equipe com os dados do request
+        $equipe->fill($request->all());
+        $equipe->imagem = $imagem_urn;
+        $equipe->save();
+        // $equipe->update([
+        //     'nome' => $request->nome,
+        //     'imagem' => $imagem_urn
+        // ]);
         return response()->json($equipe, 200);
     }
 

@@ -120,7 +120,9 @@
       <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/phpdocumentor/type-resolver" />
       <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/graham-campbell/result-type" />
       <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/composer" />
-      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/laravel/ui" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/tymon/jwt-auth" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/lcobucci/jwt" />
+      <excludeFolder url="file://$MODULE_DIR$/ngbank/vendor/namshi/jose" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

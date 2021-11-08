@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Funcionario;
+use App\Repositories\EquipeRepository;
+use App\Repositories\FuncionarioRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 class FuncionarioController extends Controller
@@ -17,10 +19,30 @@ class FuncionarioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $funcionario = $this->funcionario->all();
-        return response()->json($funcionario,200);
+    public function index(Request $request)    {
+
+        $funcionarioRepository = new FuncionarioRepository($this->funcionario);
+
+        if($request->has('atributos_equipe')){
+            $atributos_equipe = $request->atributos_equipe;
+            $funcionarioRepository->selectAtributosRegistrosRelacionados('equipe:id,'.$atributos_equipe);
+
+        }else{
+            $funcionarioRepository->selectAtributosRegistrosRelacionados('equipe');
+        }
+
+//filtros --------------------------------------------------------------------------------------------------------------
+        if($request->has('filtro')){
+
+            $funcionarioRepository->filtro($request->filtro);
+        }
+//atributos ------------------------------------------------------------------------------------------------------------
+        if($request->has('atributos')){
+            $funcionarioRepository->selectAtributos($request->atributos);
+        }
+//------------------------------------------------------------------
+
+        return response()->json($funcionarioRepository->getResultado(),200);
     }
 
     /**
@@ -57,7 +79,7 @@ class FuncionarioController extends Controller
      */
     public function show($id)
     {
-        $funcionario = $this->funcionario->find($id);
+        $funcionario = $this->funcionario->with('equipe')->find($id);
         // validação da pesquisa ************************
         if($funcionario === null){
             return response()->json(['erro' => 'O Funcionario pesquisado não existe'],404);
@@ -101,13 +123,17 @@ class FuncionarioController extends Controller
         $imagem = $request->file('imagem');
         $imagem_urn = $imagem->store('imagens/funcionarios', 'public');
 
-        $funcionario->update([
-            'equipe_id' => $request ->equipe_id,
-            'nome' => $request->nome,
-            'imagem' => $imagem_urn,
-            'data_nascimento' => $request->data_nascimento
-        ]);
-        return response()->json($funcionario, 200);
+        $funcionario->fill($request->all());
+        $funcionario->imagem = $imagem_urn;
+        $funcionario->save();
+
+      // $funcionario->update([
+      //     'equipe_id' => $request ->equipe_id,
+      //     'nome' => $request->nome,
+      //     'imagem' => $imagem_urn,
+      //     'data_nascimento' => $request->data_nascimento
+      // ]);
+      return response()->json($funcionario, 200);
     }
 
     /**
