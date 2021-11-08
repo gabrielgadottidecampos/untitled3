@@ -27,4 +27,11 @@ class Equipe extends Model
         'nome.min' => 'O nome deve conter no minimo 3 caracteres'
     ];
     }
+
+    //relecionamento entre marca e funcionario *************************************************************************
+    public function funcionarios()
+    {
+        //uma equipe possui muitos funcionarios ******************
+        return $this->hasMany('App\Models\Funcionario'); // um para muitos
+    }
 }

@@ -32,4 +32,11 @@ class Funcionario extends Model
             'data_nascimento.date' => 'é nescessario digitar uma data valida'
         ];
     }
+
+    // função de relacionamento entre Equipe e Funcionario *************************************************************
+    public function equipe()
+    {
+        // um funcionario pertence a uma equipe *********
+        return $this->belongsTo('App\Models\Equipe'); // pentence a
+    }
 }
